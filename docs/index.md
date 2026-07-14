@@ -10,12 +10,6 @@ permalink: /
 {: .home-title }
 
 <div class="home-hero">
-	<div class="eyebrow">Resideo × InfoMagnus</div>
-
-	<div class="brand-logo-wrap">
-		<img src="{{ '/assets/infomagnus-banner.svg' | relative_url }}" alt="InfoMagnus" class="brand-logo" />
-	</div>
-
 	<div class="hero-kickers">
 		<span class="hero-kicker">300+ Participants Ready</span>
 		<span class="hero-kicker">No Clone Required</span>
