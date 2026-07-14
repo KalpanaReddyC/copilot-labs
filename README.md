@@ -40,3 +40,25 @@ Guided walkthroughs with runnable sample code — see [cp-fundamentals/demos/REA
 | Demo 2 | IDE basics | C++ | [demo-2-getting-started](cp-fundamentals/demos/demo-2-getting-started/demo.md) |
 | Demo 3 | Prompting | Java | [demo-3-effective-prompts](cp-fundamentals/demos/demo-3-effective-prompts/demo.md) |
 | Demo 4 | Tips and techniques | C# → Flutter/Dart | [demo-4-tips-and-techniques](cp-fundamentals/demos/demo-4-tips-and-techniques/demo.md) |
+
+---
+
+## 🌐 Hosted docs site (GitHub Pages)
+
+A participant-facing site (built with the [just-the-docs](https://just-the-docs.com) Jekyll theme)
+lives in [`docs/`](docs/). Every demo page embeds its full starter code **inline** — participants
+copy, paste, and run with **no clone required** — which scales cleanly to a room of 300+.
+
+**Enable it once (repo admin):**
+
+1. Push to `main`. The workflow [`.github/workflows/pages.yml`](.github/workflows/pages.yml) builds the site.
+2. Repo **Settings → Pages → Build and deployment → Source → GitHub Actions**.
+3. The site publishes at `https://<owner>.github.io/copilot-labs/`.
+
+**Preview locally:**
+
+```bash
+cd docs
+bundle install
+bundle exec jekyll serve   # http://localhost:4000
+```

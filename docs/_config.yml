@@ -1,0 +1,42 @@
+title: GitHub Copilot Hands-on Labs
+description: >-
+  Language-neutral hands-on labs and guided demos for GitHub Copilot — built for
+  large, mixed-language cohorts. Every demo ships its code inline: copy, paste, run.
+remote_theme: just-the-docs/just-the-docs
+
+# Build settings
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+# Search (client-side, scales to any number of readers)
+search_enabled: true
+search:
+  heading_level: 3
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+
+# Navigation
+aux_links:
+  "View on GitHub":
+    - "https://github.com/KalpanaReddyC/copilot-labs"
+aux_links_new_tab: true
+
+# Footer
+back_to_top: true
+back_to_top_text: "Back to top"
+last_edit_timestamp: false
+
+# Code copy button (just-the-docs built-in)
+enable_copy_code_button: true
+
+# Color scheme
+color_scheme: dark
+
+# Exclude non-site files from the build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
