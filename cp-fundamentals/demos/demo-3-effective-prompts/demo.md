@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="../../../assets/infomagnus-banner.svg" alt="InfoMagnus" height="56" />
+</p>
+
 <h1 align="center">✍️ Demo 3 — Writing Effective Prompts</h1>
 
 <p align="center">

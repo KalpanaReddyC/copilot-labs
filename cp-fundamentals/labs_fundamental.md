@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="../assets/infomagnus-banner.svg" alt="InfoMagnus" height="56" />
+</p>
+
 <h1 align="center">🎯 GitHub Copilot — Common Hands-on Labs</h1>
 
 <p align="center">

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="../../../assets/infomagnus-banner.svg" alt="InfoMagnus" height="56" />
+</p>
+
 <h1 align="center">🐍 Demo 1 — GitHub Copilot Overview</h1>
 
 <p align="center">
