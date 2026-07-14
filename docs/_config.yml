@@ -17,12 +17,6 @@ search:
   preview_words_before: 5
   preview_words_after: 10
 
-# Navigation
-aux_links:
-  "View on GitHub":
-    - "https://github.com/KalpanaReddyC/copilot-labs"
-aux_links_new_tab: true
-
 # Footer
 back_to_top: true
 back_to_top_text: "Back to top"
