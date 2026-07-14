@@ -136,7 +136,7 @@ java Main
 - Compare alternative completions and accept the best one with confidence.
 
 **Mode:** ghost text
-**Model:** base model (e.g. GPT-5.4)
+**Model:** GPT-5.4
 
 **Prompt to give:**
 > `// TODO: validate that a string is a well-formed email address -> returns true/false`
@@ -175,7 +175,7 @@ language automatically.
 - Know when to use ghost text, inline chat, Ask, Edit, Agent, and NES.
 
 **Mode:** ghost text · inline chat · Ask · Plan · Edit · Agent · NES
-**Model:** base model (e.g. GPT-5.4)
+**Model:** GPT-5.4
 
 **Prompt to give:**
 > `Build a math utilities module (factorial, gcd, average/mean). Validate negative input,`
@@ -221,7 +221,7 @@ language automatically.
 - Steer Copilot with context variables (`#file`, `@workspace`).
 
 **Mode:** Chat (Ask / Plan / Edit) with context variables
-**Model:** base model (e.g. GPT-5.4)
+**Model:** GPT-5.4
 
 1. Create a small list/array of "user" records, each with a `name`, `age`, and `active` flag
    (let ghost text build the sample data).
@@ -257,7 +257,7 @@ language automatically.
 - Use Ask mode to find the root cause of a real bug.
 
 **Mode:** Ask · Edit · inline chat
-**Model:** base model (e.g. GPT-5.4)
+**Model:** GPT-5.4
 
 **Prompt to give:**
 > `Create a function that parses a "key=value" config string into a map/dictionary/object,`

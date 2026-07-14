@@ -1,5 +1,6 @@
 ---
 title: Hands-on Labs
+permalink: /labs/
 nav_order: 3
 description: "Six language-neutral Copilot labs. You describe intent; Copilot writes the code."
 ---
@@ -13,7 +14,7 @@ what you want and it generates the code in the language you picked. **Copilot wr
 you review and verify it.**
 
 {: .note }
-> New here? Do the [Setup](setup) once, then work through the labs **in order** — each builds a
+> New here? Do the [Setup]({{ '/setup/' | relative_url }}) once, then work through the labs **in order** — each builds a
 > skill the next one uses. Budget ~5 min setup + ~20 min per lab. Labs 1–4 are the core.
 
 ## Table of contents
@@ -26,7 +27,7 @@ you review and verify it.**
 
 ## How to use these labs
 
-1. **Pick one language** and do the [Setup](setup) once.
+1. **Pick one language** and do the [Setup]({{ '/setup/' | relative_url }}) once.
 2. Work through the labs **in order**.
 3. For every step, the guide gives you the **exact prompt to type** and **which Copilot mode** to use.
 4. **Try it yourself first**, then read what Copilot produced before accepting it.
@@ -36,7 +37,7 @@ you review and verify it.**
 
 ## Lab 1 — Code completions & comment-driven completion
 
-**Time:** ~15 min · **Mode:** code completions · **Model:** base model (e.g. GPT-5.4)
+**Time:** ~15 min · **Mode:** code completions · **Model:** GPT-5.4
 
 **Learning objectives**
 - Describe intent in a comment and let Copilot's code completions write the function body.
@@ -48,7 +49,7 @@ you review and verify it.**
 // TODO: check a password is strong (>= 8 chars, upper, lower, digit) -> true/false
 ```
 
-1. Create the scratch file for your language (see [Setup](setup)) and add the two `TODO` comments above.
+1. Create the scratch file for your language (see [Setup]({{ '/setup/' | relative_url }})) and add the two `TODO` comments above.
 2. Put your cursor under the first comment and start typing the function signature. Watch for
    **grey ghost text**. Press **Alt+]** to compare an alternative, then **Tab** to accept.
    *Do not type the regex yourself* — let Copilot suggest it, then read it before accepting.
@@ -71,7 +72,7 @@ you review and verify it.**
 
 ## Lab 2 — Chat modes: Ask · Plan · Edit · Agent (+ inline chat + NES)
 
-**Time:** ~25 min · **Mode:** code completions · inline chat · Ask · Plan · Edit · Agent · NES · **Model:** base model
+**Time:** ~25 min · **Mode:** code completions · inline chat · Ask · Plan · Edit · Agent · NES · **Model:** GPT-5.4
 
 **Learning objectives**
 - Grow a small module using the right Copilot mode at each step.
@@ -132,7 +133,7 @@ you review and verify it.**
 
 ## Lab 3 — Writing effective prompts
 
-**Time:** ~20 min · **Mode:** Chat (Ask / Plan / Edit) with context variables · **Model:** base model
+**Time:** ~20 min · **Mode:** Chat (Ask / Plan / Edit) with context variables · **Model:** GPT-5.4
 
 **Learning objectives**
 - Feel the difference between weak and strong prompts on the same task.
@@ -173,7 +174,7 @@ you review and verify it.**
 
 ## Lab 4 — Practical scenarios: generate, refactor, debug, document
 
-**Time:** ~25 min · **Mode:** Ask · Edit · inline chat · **Model:** base model
+**Time:** ~25 min · **Mode:** Ask · Edit · inline chat · **Model:** GPT-5.4
 
 **Learning objectives**
 - Run the everyday loop: generate, refactor, debug, and document code with Copilot.

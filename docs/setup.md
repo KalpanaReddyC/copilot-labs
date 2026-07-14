@@ -1,5 +1,6 @@
 ---
 title: Setup
+permalink: /setup/
 nav_order: 2
 description: "Install one language toolchain, confirm Copilot, and learn the modes you'll use."
 ---

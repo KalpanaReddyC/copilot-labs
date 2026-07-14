@@ -152,7 +152,16 @@ samp {
 }
 
 .main-content a {
+  color: #0b66c3;
   text-underline-offset: 0.2em;
+}
+
+.main-content a:hover {
+  color: #084f99;
+}
+
+.main-content a:visited {
+  color: #5a46c7;
 }
 
 .main-content .btn {
@@ -306,6 +315,7 @@ samp {
   border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 700;
+  color: #13324f;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   background: rgba(68, 212, 255, 0.12);

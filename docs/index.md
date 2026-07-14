@@ -25,8 +25,8 @@ permalink: /
 	<p class="fs-5"><strong>No git clone required.</strong></p>
 </div>
 
-[Start the Labs](labs){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Browse the Demos](demos){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Start the Labs]({{ '/labs/' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Browse the Demos]({{ '/demos/' | relative_url }}){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -42,19 +42,19 @@ Copilot writes the code; you review, run, and verify.
 	<article class="home-card">
 		<h3>🎯 Hands-on Labs</h3>
 		<p>Six language-neutral labs. You describe intent, Copilot writes the code.</p>
-		<p><a href="labs">Open Labs</a></p>
+		<p><a href="{{ '/labs/' | relative_url }}">Open Labs</a></p>
 	</article>
 	<article class="home-card">
 		<h3>🎬 Guided Demos</h3>
 		<p>Four presenter-led walkthroughs with complete runnable code embedded on each page.</p>
-		<p><a href="demos">Open Demos</a></p>
+		<p><a href="{{ '/demos/' | relative_url }}">Open Demos</a></p>
 	</article>
 </div>
 
 ## Before you start
 
-1. Read the [**Setup guide**](setup) once — install one language toolchain and confirm Copilot is signed in.
-2. Learn the [**Copilot modes cheat sheet**](setup#copilot-features-cheat-sheet) (code completions, inline chat, Ask/Plan/Edit/Agent, NES).
+1. Read the [**Setup guide**]({{ '/setup/' | relative_url }}) once — install one language toolchain and confirm Copilot is signed in.
+2. Learn the [**Copilot modes cheat sheet**]({{ '/setup/#copilot-features-cheat-sheet' | relative_url }}) (code completions, inline chat, Ask/Plan/Edit/Agent, NES).
 3. Pick a track above and go.
 
 {: .highlight }
