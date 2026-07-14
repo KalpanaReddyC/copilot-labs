@@ -1,0 +1,198 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap");
+
+:root {
+  --brand-cyan: #44d4ff;
+  --brand-mint: #38f4c8;
+  --brand-amber: #ffd166;
+  --panel-bg: rgba(9, 17, 33, 0.86);
+  --panel-border: rgba(68, 212, 255, 0.28);
+}
+
+body {
+  font-family: "Sora", "Segoe UI", sans-serif;
+  letter-spacing: 0.01em;
+  text-wrap: pretty;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: "JetBrains Mono", "Cascadia Code", monospace;
+}
+
+.side-bar {
+  background:
+    radial-gradient(120% 80% at 20% 10%, rgba(68, 212, 255, 0.14) 0%, rgba(68, 212, 255, 0) 45%),
+    radial-gradient(120% 80% at 80% 0%, rgba(56, 244, 200, 0.1) 0%, rgba(56, 244, 200, 0) 50%),
+    #0a1223;
+  border-right: 1px solid rgba(68, 212, 255, 0.16);
+}
+
+.main {
+  background:
+    radial-gradient(70% 50% at 80% 0%, rgba(56, 244, 200, 0.08) 0%, rgba(56, 244, 200, 0) 60%),
+    radial-gradient(80% 60% at 0% 8%, rgba(68, 212, 255, 0.08) 0%, rgba(68, 212, 255, 0) 55%),
+    #080f1f;
+}
+
+.site-title {
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.site-button {
+  border-radius: 12px;
+}
+
+.main-content h1 {
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+
+.main-content h2,
+.main-content h3 {
+  letter-spacing: 0.01em;
+}
+
+.main-content a {
+  text-underline-offset: 0.2em;
+}
+
+.main-content .btn {
+  border-radius: 999px;
+  border: 1px solid rgba(68, 212, 255, 0.5);
+  background: linear-gradient(130deg, rgba(68, 212, 255, 0.2), rgba(56, 244, 200, 0.16));
+  color: #ecf8ff;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.main-content .btn.btn-primary {
+  background: linear-gradient(130deg, #0f89c5, #24b08e);
+  border-color: transparent;
+  color: #fff;
+}
+
+.main-content .btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(12, 163, 204, 0.3);
+  border-color: rgba(68, 212, 255, 0.75);
+}
+
+.main-content .note,
+.main-content .highlight,
+.main-content .warning {
+  border-radius: 14px;
+  border: 1px solid var(--panel-border);
+  background: var(--panel-bg);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.main-content table {
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid rgba(68, 212, 255, 0.24);
+}
+
+.main-content table th {
+  background: rgba(56, 244, 200, 0.08);
+}
+
+.main-content table td,
+.main-content table th {
+  border-color: rgba(68, 212, 255, 0.18);
+}
+
+.main-content pre {
+  border-radius: 14px;
+  border: 1px solid rgba(68, 212, 255, 0.24);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24);
+}
+
+.main-content details {
+  border: 1px solid rgba(68, 212, 255, 0.28);
+  border-radius: 12px;
+  background: rgba(9, 17, 33, 0.72);
+  padding: 0.4rem 0.8rem;
+}
+
+.main-content summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.home-hero {
+  position: relative;
+  border: 1px solid rgba(68, 212, 255, 0.3);
+  border-radius: 20px;
+  padding: 1.4rem 1.2rem;
+  background:
+    linear-gradient(150deg, rgba(68, 212, 255, 0.12), rgba(56, 244, 200, 0.08)),
+    rgba(9, 17, 33, 0.78);
+  overflow: hidden;
+}
+
+.home-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -60% auto;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 209, 102, 0.32), rgba(255, 209, 102, 0));
+  pointer-events: none;
+}
+
+.hero-kickers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero-kicker {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(68, 212, 255, 0.12);
+  border: 1px solid rgba(68, 212, 255, 0.38);
+}
+
+.home-cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 1rem 0 0;
+}
+
+.home-card {
+  border: 1px solid rgba(68, 212, 255, 0.24);
+  border-radius: 16px;
+  padding: 1rem;
+  background: rgba(9, 17, 33, 0.82);
+}
+
+.home-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+@media (max-width: 50rem) {
+  .home-hero {
+    border-radius: 14px;
+    padding: 1rem;
+  }
+
+  .main-content .btn {
+    width: 100%;
+    margin-bottom: 0.55rem;
+  }
+}

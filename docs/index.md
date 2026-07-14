@@ -9,10 +9,21 @@ permalink: /
 # 🤖 GitHub Copilot — Hands-on Labs
 {: .fs-9 }
 
-A single set of **language-neutral** labs and **guided demos** for GitHub Copilot.
-Every demo ships its starter code **inline on the page** — copy it, paste it into a file,
-and run. **No git clone required.**
-{: .fs-6 .fw-300 }
+<div class="home-hero">
+	<div class="hero-kickers">
+		<span class="hero-kicker">300+ Participants Ready</span>
+		<span class="hero-kicker">No Clone Required</span>
+		<span class="hero-kicker">Copy-Paste-Run</span>
+	</div>
+
+	<p class="fs-6 fw-300">
+		A single set of <strong>language-neutral</strong> labs and <strong>guided demos</strong> for GitHub Copilot.
+		Every demo ships its starter code <strong>inline on the page</strong> — copy it, paste it into a file,
+		and run.
+	</p>
+
+	<p class="fs-5"><strong>No git clone required.</strong></p>
+</div>
 
 [Start the Labs](labs){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Browse the Demos](demos){: .btn .fs-5 .mb-4 .mb-md-0 }
@@ -27,10 +38,18 @@ Copilot writes the code; you review, run, and verify.
 
 ## Two tracks
 
-| Track | What it is | Best for |
-|---|---|---|
-| [🎯 Hands-on Labs](labs) | Six language-neutral labs. You describe intent, Copilot writes the code. | Everyone — this is the core |
-| [🎬 Guided Demos](demos) | Four presenter-led walkthroughs with **complete runnable code embedded on the page**. | Live demos + self-paced practice |
+<div class="home-cards">
+	<article class="home-card">
+		<h3>🎯 Hands-on Labs</h3>
+		<p>Six language-neutral labs. You describe intent, Copilot writes the code.</p>
+		<p><a href="labs">Open Labs</a></p>
+	</article>
+	<article class="home-card">
+		<h3>🎬 Guided Demos</h3>
+		<p>Four presenter-led walkthroughs with complete runnable code embedded on each page.</p>
+		<p><a href="demos">Open Demos</a></p>
+	</article>
+</div>
 
 ## Before you start
 
