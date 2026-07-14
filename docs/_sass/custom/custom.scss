@@ -94,7 +94,7 @@ samp {
 
 .site-logo {
   width: 100%;
-  height: 34px;
+  height: 50px;
   background-position: left center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -213,32 +213,6 @@ samp {
   overflow: hidden;
 }
 
-.eyebrow {
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: 0.85rem;
-  padding: 0.35rem 0.65rem;
-  border: 1px solid rgba(68, 212, 255, 0.24);
-  border-radius: 999px;
-  background: rgba(7, 22, 44, 0.5);
-  font-size: 0.8rem;
-  letter-spacing: 0.16em;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.brand-logo-wrap {
-  margin-bottom: 0.9rem;
-}
-
-.brand-logo {
-  display: block;
-  max-width: 250px;
-  width: 100%;
-  height: auto;
-  filter: drop-shadow(0 8px 20px rgba(3, 25, 44, 0.45));
-}
-
 .home-hero::after {
   content: "";
   position: absolute;
@@ -305,16 +279,6 @@ samp {
   .home-hero {
     border-radius: 14px;
     padding: 1rem;
-  }
-
-  .eyebrow {
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
-    padding: 0.3rem 0.52rem;
-  }
-
-  .brand-logo {
-    max-width: 210px;
   }
 
   .main-content .btn {
