@@ -1,7 +1,7 @@
 ---
 title: Demo 1 — Copilot overview
 parent: Guided Demos
-nav_order:1
+nav_order: 1
 description: "Complete five stubbed Python functions with ghost text, then print a formatted receipt."
 ---
 
