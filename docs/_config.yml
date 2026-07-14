@@ -17,6 +17,15 @@ search:
   preview_words_before: 5
   preview_words_after: 10
 
+# External links in left navigation
+nav_external_links:
+  - title: GitHub Repository
+    url: https://github.com/KalpanaReddyC/copilot-labs
+  - title: Pages Workflow
+    url: https://github.com/KalpanaReddyC/copilot-labs/blob/main/.github/workflows/pages.yml
+  - title: Actions Runs
+    url: https://github.com/KalpanaReddyC/copilot-labs/actions/workflows/pages.yml
+
 # Footer
 back_to_top: true
 back_to_top_text: "Back to top"

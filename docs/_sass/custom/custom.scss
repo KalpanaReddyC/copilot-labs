@@ -29,6 +29,40 @@ samp {
   border-right: 1px solid rgba(68, 212, 255, 0.16);
 }
 
+.main-header {
+  border-bottom: 1px solid rgba(68, 212, 255, 0.2);
+  min-height: 3.5rem;
+}
+
+/* Hide top-right aux links area (e.g., stale/cached 'View on GitHub'). */
+.main-header .aux-nav {
+  display: none !important;
+}
+
+.main-header .search {
+  max-width: 60rem;
+}
+
+.site-nav {
+  margin-top: 0.5rem;
+}
+
+.site-nav .nav-list .nav-list-link {
+  border-radius: 10px;
+  padding: 0.45rem 0.65rem;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+.site-nav .nav-list .nav-list-link:hover {
+  background: rgba(68, 212, 255, 0.12);
+  color: #e9f8ff;
+}
+
+.site-nav .nav-list .nav-list-item.active > .nav-list-link {
+  background: linear-gradient(120deg, rgba(68, 212, 255, 0.2), rgba(56, 244, 200, 0.12));
+  color: #effbff;
+}
+
 .main {
   background:
     radial-gradient(70% 50% at 80% 0%, rgba(56, 244, 200, 0.08) 0%, rgba(56, 244, 200, 0) 60%),
@@ -49,6 +83,7 @@ samp {
   font-weight: 800;
   letter-spacing: 0.01em;
   line-height: 1.1;
+  margin-bottom: 0.75rem;
 }
 
 .main-content h2,
@@ -78,6 +113,10 @@ samp {
   transform: translateY(-1px);
   box-shadow: 0 8px 24px rgba(12, 163, 204, 0.3);
   border-color: rgba(68, 212, 255, 0.75);
+}
+
+.main-content hr {
+  border-color: rgba(68, 212, 255, 0.22);
 }
 
 .main-content .note,
@@ -186,6 +225,14 @@ samp {
 }
 
 @media (max-width: 50rem) {
+  .main-header {
+    min-height: 3rem;
+  }
+
+  .main-header .search {
+    max-width: 100%;
+  }
+
   .home-hero {
     border-radius: 14px;
     padding: 1rem;
