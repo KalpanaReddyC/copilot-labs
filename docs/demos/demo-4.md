@@ -1,14 +1,19 @@
 ---
 title: Demo 4 — Tips and techniques
+layout: default
 parent: Guided Demos
 nav_order: 4
+permalink: /demos/demo-4.html
 description: "Context, refactoring to LINQ, documentation, multilingual convert to Dart, /tests, and an MCP intro on a working C# inventory class."
 ---
 
 # 🛠️ Demo 4 — Tips and Techniques
 {: .no_toc }
 
-**Language:** C# → converted to **Flutter/Dart** · **File:** `Inventory.cs`
+**Quick info**
+
+- **Language:** C# → converted to **Flutter/Dart**
+- **File:** `Inventory.cs`
 
 This class already works — run it first so the room sees a passing baseline, then use Copilot to
 add context, refactor to LINQ, document, convert to another language, and generate tests.

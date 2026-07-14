@@ -1,16 +1,22 @@
 ---
 title: Demo 1 — Copilot overview
+layout: default
 parent: Guided Demos
 nav_order: 1
-description: "Complete five stubbed Python functions with ghost text, then print a formatted receipt."
+permalink: /demos/demo-1.html
+description: "Complete five stubbed Python functions with Code completions, then print a formatted receipt."
 ---
 
 # 🐍 Demo 1 — GitHub Copilot Overview
 {: .no_toc }
 
-**Language:** Python · **File:** `orders.py` · **Mode:** ghost text (no chat panel needed)
+**Quick info**
 
-The goal is to complete the 5 stubbed functions in `orders.py` using **ghost text** (inline
+- **Language:** Python
+- **File:** `orders.py`
+- **Mode:** Code completions (no chat panel needed)
+
+The goal is to complete the 5 stubbed functions in `orders.py` using **Code completions** (inline
 suggestions). Once all five are filled in, run the file and Copilot's code prints a formatted
 store receipt.
 
@@ -26,8 +32,8 @@ store receipt.
 
 | Setting | Value |
 |---|---|
-| **Mode** | Inline **ghost text** (just type — no chat panel) |
-| **Model** | Completion model (automatic) |
+| **Mode** | **Code completions** (inline suggestions; no chat panel) |
+| **Model** | Completion model (auto) |
 | **File** | `orders.py` |
 | **Prep** | Create `orders.py` from the code below. Make sure Copilot is signed in. Run it once — everything is `FAIL` until you fill the functions in. |
 
@@ -38,12 +44,12 @@ Copy this into a new file named `orders.py`:
 ```python
 # ============================================================
 #  Demo 1 - GitHub Copilot Overview
-#  Feature: Ghost text / code completions - "AI assistance in action"
+#  Feature: Code completions - "AI assistance in action"
 # ============================================================
 #
 #  HOW TO PRESENT:
 #    1. Delete the `pass` under a function.
-#    2. Type the first token (e.g. `ret`) and PAUSE - grey "ghost text" appears.
+#    2. Type the first token (e.g. `ret`) and PAUSE - gray "ghost text" (inline suggestion) appears.
 #    3. Press Tab to accept, Alt+] / Alt+[ to cycle, Esc to dismiss.
 
 STORE_NAME = "InfoMagnus Tech Store"
@@ -63,29 +69,29 @@ TAX_RATE = 8         # percent
 
 # Return the subtotal: sum of price * qty for every item in the list
 def order_total(items):
-    pass  # ghost text -> return sum(i["price"] * i["qty"] for i in items)
+    pass  # code completion -> return sum(i["price"] * i["qty"] for i in items)
 
 
 # Return the discount amount (not the new total): DISCOUNT_RATE% of subtotal
 # when subtotal >= DISCOUNT_THRESHOLD, otherwise 0.0
 def loyalty_discount(subtotal):
-    pass  # ghost text completes this
+    pass  # code completion completes this
 
 
 # Return amount plus tax, where rate is a percentage (e.g. 8 means 8%)
 def apply_tax(amount, rate):
-    pass  # ghost text completes this
+    pass  # code completion completes this
 
 
 # Return a receipt line like "Mechanical Keyboard   x2   $90.00" for one item dict
 def receipt_line(item):
-    pass  # ghost text completes this
+    pass  # code completion completes this
 
 
 # Return the final amount the customer pays:
 #   subtotal minus loyalty_discount, then apply_tax at TAX_RATE, rounded to 2 decimals
 def grand_total(items):
-    pass  # ghost text completes this
+    pass  # code completion completes this
 
 
 def print_receipt(items):
@@ -133,7 +139,7 @@ if __name__ == "__main__":
         print("\nALL PASS - here's the receipt:\n")
         print_receipt(ITEMS)
     else:
-        print("\nSOME FAILED - finish the functions with ghost text, then re-run.")
+        print("\nSOME FAILED - finish the functions with code completions, then re-run.")
 ```
 
 ---
@@ -141,15 +147,44 @@ if __name__ == "__main__":
 ## Prompts to type
 
 For each function: **delete the `pass` line**, put the cursor on the empty indented line, then type
-the seed below and **pause** (don't keep typing). Grey ghost text completes the rest — press **Tab**.
+the seed below and **pause** (don't keep typing). Copilot shows gray **ghost text** (the inline suggestion), and pressing **Tab** accepts it.
 
-| Function | Type this seed (and pause) | Ghost text should complete to |
-|---|---|---|
-| `order_total` | `    ret` | `return sum(i["price"] * i["qty"] for i in items)` |
-| `loyalty_discount` | `    ret` | `return subtotal * DISCOUNT_RATE / 100 if subtotal >= DISCOUNT_THRESHOLD else 0.0` |
-| `apply_tax` | `    ret` | `return amount + amount * rate / 100` |
-| `receipt_line` | `    ret` | `return f"{item['name']}   x{item['qty']}   ${item['price'] * item['qty']:.2f}"` |
-| `grand_total` | `    sub` | subtotal − discount, then `apply_tax(..., TAX_RATE)` |
+<table class="demo-prompts-table">
+    <thead>
+        <tr>
+            <th>Function</th>
+            <th>Type this seed (and pause)</th>
+            <th>Code completion should produce</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><code>order_total</code></td>
+            <td><code>    ret</code></td>
+            <td><code>return sum(i["price"] * i["qty"] for i in items)</code></td>
+        </tr>
+        <tr>
+            <td><code>loyalty_discount</code></td>
+            <td><code>    ret</code></td>
+            <td><code>return subtotal * DISCOUNT_RATE / 100 if subtotal &gt;= DISCOUNT_THRESHOLD else 0.0</code></td>
+        </tr>
+        <tr>
+            <td><code>apply_tax</code></td>
+            <td><code>    ret</code></td>
+            <td><code>return amount + amount * rate / 100</code></td>
+        </tr>
+        <tr>
+            <td><code>receipt_line</code></td>
+            <td><code>    ret</code></td>
+            <td><code>return f"{item['name']}   x{item['qty']}   ${item['price'] * item['qty']:.2f}"</code></td>
+        </tr>
+        <tr>
+            <td><code>grand_total</code></td>
+            <td><code>    sub</code></td>
+            <td>subtotal − discount, then <code>apply_tax(..., TAX_RATE)</code></td>
+        </tr>
+    </tbody>
+</table>
 
 {: .warning }
 > **`receipt_line` — exact spacing matters.** Its self-check compares against a fixed string, so use

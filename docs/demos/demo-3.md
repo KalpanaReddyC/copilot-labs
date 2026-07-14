@@ -1,14 +1,20 @@
 ---
 title: Demo 3 — Writing effective prompts
+layout: default
 parent: Guided Demos
 nav_order: 3
+permalink: /demos/demo-3.html
 description: "Turn weak prompts into strong ones on a Java product catalog: goal, inputs, outputs, constraints, and @/# references."
 ---
 
 # ✍️ Demo 3 — Writing Effective Prompts
 {: .no_toc }
 
-**Language:** Java · **File:** `Catalog.java` · **Run:** `javac Catalog.java && java Catalog`
+**Quick info**
+
+- **Language:** Java
+- **File:** `Catalog.java`
+- **Run:** `javac Catalog.java && java Catalog`
 
 You're building a small **product catalog utility** and learning to write strong prompts —
 goal, inputs, outputs, constraints — plus `@` and `#` references and iterative refinement.

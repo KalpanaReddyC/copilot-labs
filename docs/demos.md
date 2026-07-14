@@ -2,6 +2,7 @@
 title: Guided Demos
 nav_order: 4
 has_children: true
+permalink: /demos/
 description: "Four presenter-led walkthroughs with complete runnable code embedded on each page."
 ---
 
@@ -20,16 +21,16 @@ A collapsible **solution** is included on each page so you can verify or unblock
 
 | Demo | Area | Language | File to create |
 |---|---|---|---|
-| [Demo 1 — Copilot overview]({{ '/demos/demo-1' | relative_url }}) | Ghost text / completions | Python | `orders.py` |
-| [Demo 2 — Getting started in your IDE]({{ '/demos/demo-2' | relative_url }}) | Inline chat, NES, Ask, Plan, `/` commands | C++ | `tip_calculator.cpp` |
-| [Demo 3 — Writing effective prompts]({{ '/demos/demo-3' | relative_url }}) | Prompt crafting, `@`/`#` refs, refinement | Java | `Catalog.java` |
-| [Demo 4 — Tips and techniques]({{ '/demos/demo-4' | relative_url }}) | Refactor, docs, convert, `/tests`, MCP intro | C# → Dart | `Inventory.cs` |
+| [Demo 1 — Copilot overview]({{ '/demos/demo-1.html' | relative_url }}) | Code completions | Python | `orders.py` |
+| [Demo 2 — Getting started in your IDE]({{ '/demos/demo-2.html' | relative_url }}) | Inline chat, NES, Ask, Plan, `/` commands | C++ | `tip_calculator.cpp` |
+| [Demo 3 — Writing effective prompts]({{ '/demos/demo-3.html' | relative_url }}) | Prompt crafting, `@`/`#` refs, refinement | Java | `Catalog.java` |
+| [Demo 4 — Tips and techniques]({{ '/demos/demo-4.html' | relative_url }}) | Refactor, docs, convert, `/tests`, MCP intro | C# → Dart | `Inventory.cs` |
 
 ## Which model / which mode (quick reference)
 
 | Feature | Mode in VS Code | Recommended model |
 |---|---|---|
-| Ghost text / completions | Inline (just type) | Completion model (automatic) |
+| Code completions | Inline (just type) | Completion model (automatic) |
 | Next Edit Suggestions (NES) | Inline (Tab to jump) | Completion model (automatic) |
 | Inline chat | **Ctrl+I** in the editor | GPT-5.4 (fast base model) |
 | Quick chat | **Ctrl+Shift+I** | GPT-5.4 |

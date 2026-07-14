@@ -1,17 +1,23 @@
 ---
 title: Demo 2 — Getting started in your IDE
+layout: default
 parent: Guided Demos
 nav_order: 2
-description: "Give every Copilot surface a real job on a C++ tip calculator: ghost text, inline chat, NES, Ask, Plan, and / commands."
+permalink: /demos/demo-2.html
+description: "Give every Copilot surface a real job on a C++ tip calculator: code completions, inline chat, NES, Ask, Plan, and / commands."
 ---
 
 # 💻 Demo 2 — Getting Started in Your IDE
 {: .no_toc }
 
-**Language:** C++ · **File:** `tip_calculator.cpp` · **Build:** `g++ -std=c++17 tip_calculator.cpp -o tip && ./tip`
+**Quick info**
+
+- **Language:** C++
+- **File:** `tip_calculator.cpp`
+- **Build:** `g++ -std=c++17 tip_calculator.cpp -o tip && ./tip`
 
 You're building a small **tip calculator / bill summary** and using every Copilot surface:
-ghost text, inline chat (**Ctrl+I**), Next Edit Suggestions, quick chat, Ask, Plan, and `/` commands.
+code completions, inline chat (**Ctrl+I**), Next Edit Suggestions, quick chat, Ask, Plan, and `/` commands.
 Everything is stubbed or buggy so the file runs but **FAILs** until you demo.
 
 ## Table of contents
@@ -26,8 +32,8 @@ Everything is stubbed or buggy so the file runs but **FAILs** until you demo.
 
 | Setting | Value |
 |---|---|
-| **Modes shown** | Ghost text · **Inline chat** (Ctrl+I) · **NES** · **Quick chat** (Ctrl+Shift+I) · **Ask** · **Plan** |
-| **Model** | GPT-5.4 for chat; completion model (automatic) for ghost text & NES |
+| **Modes shown** | Code completions · **Inline chat** (Ctrl+I) · **NES** · **Quick chat** (Ctrl+Shift+I) · **Ask** · **Plan** |
+| **Model** | GPT-5.4 for chat; completion model (auto) for code completions & NES |
 | **File** | `tip_calculator.cpp` |
 | **Prep** | Enable NES: Settings → `github.copilot.nextEditSuggestions.enabled` → **On**. Have `g++` ready. Run once — several checks **FAIL** until you demo. |
 
@@ -44,10 +50,10 @@ Everything is stubbed or buggy so the file runs but **FAILs** until you demo.
 #include <sstream>
 #include <string>
 
-// ---- Ghost text target -------------------------------------
+// ---- Code completions target -------------------------------
 // Return the tip: amount * percent / 100
 double calculate_tip(double amount, double percent) {
-    return 0.0; // let ghost text complete this
+    return 0.0; // let code completions complete this
 }
 
 // ---- Inline chat target (Ctrl+I) ---------------------------
@@ -138,15 +144,15 @@ int main() {
 
 ---
 
-## Step 1 — Ghost text (`calculate_tip`)
+## Step 1 — Code completions (`calculate_tip`)
 
-Inside `calculate_tip`, delete `return 0.0; // let ghost text complete this`, then type the seed and pause:
+Inside `calculate_tip`, delete `return 0.0; // let code completions complete this`, then type the seed and pause:
 
 ```cpp
     ret
 ```
 
-Ghost text completes it to `return amount * percent / 100;`. Press **Tab**.
+Code completions complete it to `return amount * percent / 100;`. Press **Tab**.
 
 ## Step 2 — Inline chat, Ctrl+I
 

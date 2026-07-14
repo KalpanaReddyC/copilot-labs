@@ -90,7 +90,7 @@ java Main
 
 | Feature | What it is | How to invoke |
 |---|---|---|
-| **Ghost text** | Grey inline completion as you type | Just type; **Tab** accepts, **Esc** dismisses |
+| **Code completions** | Grey inline completion as you type | Just type; **Tab** accepts, **Esc** dismisses |
 | **Cycle suggestions** | Alternative completions | **Alt+]** / **Alt+[** |
 | **Inline chat** | Ask/edit inside the file | **Ctrl+I** (VS Code) |
 | **Quick chat** | Fast one-off question | **Ctrl+Shift+I** |

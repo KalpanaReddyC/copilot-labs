@@ -54,7 +54,7 @@ Copilot writes the code; you review, run, and verify.
 ## Before you start
 
 1. Read the [**Setup guide**](setup) once — install one language toolchain and confirm Copilot is signed in.
-2. Learn the [**Copilot modes cheat sheet**](setup#copilot-features-cheat-sheet) (ghost text, inline chat, Ask/Plan/Edit/Agent, NES).
+2. Learn the [**Copilot modes cheat sheet**](setup#copilot-features-cheat-sheet) (code completions, inline chat, Ask/Plan/Edit/Agent, NES).
 3. Pick a track above and go.
 
 {: .highlight }

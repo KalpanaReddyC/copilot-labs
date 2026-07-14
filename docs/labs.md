@@ -34,12 +34,12 @@ you review and verify it.**
 
 ---
 
-## Lab 1 — Ghost text & comment-driven completion
+## Lab 1 — Code completions & comment-driven completion
 
-**Time:** ~15 min · **Mode:** ghost text · **Model:** base model (e.g. GPT-5.4)
+**Time:** ~15 min · **Mode:** code completions · **Model:** base model (e.g. GPT-5.4)
 
 **Learning objectives**
-- Describe intent in a comment and let Copilot's ghost text write the function body.
+- Describe intent in a comment and let Copilot's code completions write the function body.
 - Compare alternative completions and accept the best one with confidence.
 
 **Prompts to give:**
@@ -53,7 +53,7 @@ you review and verify it.**
    **grey ghost text**. Press **Alt+]** to compare an alternative, then **Tab** to accept.
    *Do not type the regex yourself* — let Copilot suggest it, then read it before accepting.
 3. Repeat for the password check.
-4. Below them, let ghost text help you write print/assert checks that exercise a valid and an
+4. Below them, let code completions help you write print/assert checks that exercise a valid and an
    invalid input for each function.
 5. **Run & verify** — all checks print `PASS`.
 
@@ -61,7 +61,7 @@ you review and verify it.**
 `validateEmail` / `isStrongPassword` (C++, C#, JavaScript, Java).
 
 **Checkpoints**
-- ✅ You saw ghost text and accepted a suggestion with **Tab**.
+- ✅ You saw code completions and accepted a suggestion with **Tab**.
 - ✅ Both functions were generated from comments, not hand-typed.
 - ✅ The program runs and prints only `PASS`.
 
@@ -71,30 +71,58 @@ you review and verify it.**
 
 ## Lab 2 — Chat modes: Ask · Plan · Edit · Agent (+ inline chat + NES)
 
-**Time:** ~25 min · **Mode:** ghost text · inline chat · Ask · Plan · Edit · Agent · NES · **Model:** base model
+**Time:** ~25 min · **Mode:** code completions · inline chat · Ask · Plan · Edit · Agent · NES · **Model:** base model
 
 **Learning objectives**
 - Grow a small module using the right Copilot mode at each step.
-- Know when to use ghost text, inline chat, Ask, Edit, Agent, and NES.
+- Know when to use code completions, inline chat, Ask, Edit, Agent, and NES.
 
-**Prompt to give:**
-```text
-Build a math utilities module (factorial, gcd, average/mean). Validate negative input,
-explain gcd's complexity, refactor average to handle empty input, then add unit tests.
-```
+1. **Create the file and start with code completions (`factorial`).**
+   New file. Type a `factorial` signature and let code completions complete it. Compare an alternative with **Alt+]**, then accept.
 
-1. **Ghost text — `factorial`.** New file. Type a `factorial` signature and let ghost text complete it. Compare an alternative with **Alt+]**, then accept.
-2. **Inline chat — validate input.** Cursor inside `factorial`, press **Ctrl+I**: `Return/throw a clear error if n is negative`. Review the diff and accept.
-3. **Ask mode — understand code.** Add a `gcd` function (ghost text). Open Chat → **Ask**, select it, and ask: `Explain how this works and its time complexity`. You get an explanation with **no file change**.
-4. **Edit mode — refactor safely.** Add an `average`/`mean` function. Chat → **Edit**, select it: `Refactor to handle an empty input safely and add a doc comment`. Review and apply the diff.
-5. **NES — propagate a rename.** Rename `average` to `mean` at its definition. Copilot shows a **Next Edit Suggestion** at the call site — press **Tab** to jump, **Tab** to accept.
-6. **Agent mode — multi-step.** Chat → **Agent**: `Add unit tests for all functions in this file and a short README section explaining them`. Review each change before accepting.
-7. **Run & verify.**
+2. **Inline chat — validate input in `factorial`.**
+   Cursor inside `factorial`, press **Ctrl+I**, then use:
+   ```text
+   Return/throw a clear error if n is negative.
+   ```
+   Review the diff and accept.
+
+3. **Add `gcd` and use Ask mode to understand it.**
+   Add a `gcd` function with code completions. Then open Chat → **Ask**, select it, and use:
+   ```text
+   Explain how this works and its time complexity.
+   ```
+   This should explain only (no file change).
+
+4. **Plan mode — decide the refactor before editing.**
+   Open Chat → **Plan** and use:
+   ```text
+   Plan the steps to refactor an average/mean function so it safely handles empty input and has clear documentation. Steps only.
+   ```
+
+5. **Edit mode — apply the refactor plan.**
+   Add an `average` function. Chat → **Edit**, select it, then use:
+   ```text
+   Refactor to handle an empty input safely and add a doc comment.
+   ```
+   Review and apply the diff.
+
+6. **NES — propagate a rename.**
+   Rename `average` to `mean` at its definition. Copilot shows a **Next Edit Suggestion** at the call site — press **Tab** to jump, **Tab** to accept.
+
+7. **Agent mode — generate tests and notes.**
+   Chat → **Agent**, then use:
+   ```text
+   Add unit tests for all functions in this file and a short README section explaining them.
+   ```
+   Review each change before accepting.
+
+8. **Run & verify.**
 
 **Picking a mode:** Ask = "explain / what is", Plan = "outline approach before edits", Edit = "change this selection", Agent = "do a multi-step task". Use the smallest mode that fits.
 
 **Checkpoints**
-- ✅ `factorial` came from ghost text and rejects negative input.
+- ✅ `factorial` came from code completions and rejects negative input.
 - ✅ Ask explained `gcd` **without** editing the file.
 - ✅ Edit added empty-input handling via a reviewed diff.
 - ✅ NES finished the rename at the call site.
@@ -110,17 +138,29 @@ explain gcd's complexity, refactor average to handle empty input, then add unit 
 - Feel the difference between weak and strong prompts on the same task.
 - Steer Copilot with context variables (`#file`, `@workspace`).
 
-1. Create a small list/array of "user" records, each with a `name`, `age`, and `active` flag (let ghost text build the sample data).
-2. **Weak prompt.** In Chat → Edit, select the data and ask: `sort this`. Note how much Copilot has to guess.
-3. **Strong prompt.** Undo, then ask precisely.
-   **Prompt to give:**
+1. **Create sample data with code completions.**
+   Create a small list/array of users with `name`, `age`, and `active`.
+
+2. **Weak prompt first (show the gap).**
+   In Chat → Edit, select the data and use:
+   ```text
+   sort this
+   ```
+   Note how much Copilot has to guess.
+
+3. **Strong prompt second (improve precision).**
+   Undo, then use:
    ```text
    Sort the users by active first (active before inactive), then by age ascending, then by
    name A–Z. Do not mutate the original; return a new sorted collection.
    ```
    Compare the result — specificity wins.
-4. **Add context.** Reference the current file with `#` (e.g. `#<filename>`) or the workspace with `@workspace`, then ask a question that depends on that file.
-5. **Run & verify** the sort output is correct for a tie on age.
+
+4. **Add context references.**
+   Reference `#<filename>` or `@workspace`, then ask a context-aware follow-up question.
+
+5. **Run & verify.**
+   Confirm ties on age are resolved by name order.
 
 **Checkpoints**
 - ✅ You produced a multi-key sort from a single precise prompt.
@@ -139,18 +179,34 @@ explain gcd's complexity, refactor average to handle empty input, then add unit 
 - Run the everyday loop: generate, refactor, debug, and document code with Copilot.
 - Use Ask mode to find the root cause of a real bug.
 
-**Prompt to give:**
-```text
-Create a function that parses a "key=value" config string into a map/dictionary/object,
-ignoring blank lines and lines starting with #. Then help me debug, refactor, and document it.
-```
+1. **Generate the parser.**
+   In Chat → Edit, use:
+   ```text
+   Create a function that parses a "key=value" config string into a map/dictionary/object,
+   ignoring blank lines and lines starting with #.
+   ```
 
-1. **Generate.** Ask Copilot (Edit mode) to create the parser described above.
-2. **Introduce a bug on purpose.** By hand, change the split to only keep the first character of the value. Run it — a test now fails.
-3. **Debug with Copilot.** Select the failing function, Chat → **Ask**: `This returns the wrong value for keys whose value has more than one character. Why, and what's the fix?` Apply the fix via **Edit** and re-run.
-4. **Refactor.** Inline chat (**Ctrl+I**): `Refactor for readability and handle a missing '=' gracefully`.
-5. **Document.** Ask Copilot to add a doc comment describing parameters, return value, and edge cases.
-6. **Run & verify** — all checks pass, including a multi-character value and a `#comment` line.
+2. **Introduce a bug on purpose.**
+   By hand, change the split to keep only the first character of the value. Run it and confirm a failing case.
+
+3. **Debug with Ask mode.**
+   Select the failing function, Chat → Ask, then use:
+   ```text
+   This returns the wrong value for keys whose value has more than one character. Why, and what's the fix?
+   ```
+   Apply the fix via Edit and re-run.
+
+4. **Refactor with inline chat.**
+   Use **Ctrl+I** and prompt:
+   ```text
+   Refactor for readability and handle a missing '=' gracefully.
+   ```
+
+5. **Document the function.**
+   Ask Copilot to add a doc comment covering parameters, return value, and edge cases.
+
+6. **Run & verify.**
+   Confirm all checks pass, including multi-character values and `#comment` lines.
 
 **Checkpoints**
 - ✅ Copilot generated a working parser.
@@ -168,17 +224,28 @@ ignoring blank lines and lines starting with #. Then help me debug, refactor, an
 - Explain what the Model Context Protocol (MCP) is in your own words.
 - Simulate a tool registry and dispatcher locally, with no servers.
 
-**Prompt to give:**
-```text
-In 5 bullet points, what is MCP (Model Context Protocol), and how do MCP servers give an
-AI agent access to tools and data? Keep it tool-agnostic.
-```
+1. **Learn MCP concepts first.**
+   Chat → Ask and use:
+   ```text
+   In 5 bullet points, what is MCP (Model Context Protocol), and how do MCP servers give an
+   AI agent access to tools and data? Keep it tool-agnostic.
+   ```
 
-1. **Learn.** Chat → **Ask** with the prompt above.
-2. **Model a registry.** Create a small data structure listing three imaginary "tools", each with a `name`, `description`, and `input` schema.
-3. **Write a dispatcher.** Ask Copilot to write a function that, given a tool name and an input, looks up the tool and returns a simulated result — mirroring how an MCP client routes a call to an MCP server.
-4. **Agent step.** Chat → **Agent**: `Add a new "weather" tool to the registry and a test that dispatches a call to it`. Review before accepting.
-5. **Discuss (no code):** ask Copilot when a *real* MCP server would be preferable to hard-coding a tool, and what security questions to ask before enabling one.
+2. **Model a tool registry.**
+   Create a small data structure with three imaginary tools (`name`, `description`, `input` schema).
+
+3. **Write a dispatcher.**
+   Ask Copilot for a dispatcher function that routes by tool name and returns a simulated result.
+
+4. **Extend with Agent mode.**
+   Chat → Agent and use:
+   ```text
+   Add a new "weather" tool to the registry and a test that dispatches a call to it.
+   ```
+   Review before accepting.
+
+5. **Discuss production usage (no code).**
+   Ask when a real MCP server is better than hard-coded tools and what security checks to do first.
 
 **Checkpoints**
 - ✅ You can explain MCP in your own words (client, server, tools, context).
@@ -195,18 +262,27 @@ AI agent access to tools and data? Keep it tool-agnostic.
 - Treat Copilot output as a draft: review critically, validate with tests, and fix.
 - Catch a subtle boundary/operator bug that only review or tests reveal.
 
-**Prompt to give:**
-```text
-Review this for boundary bugs, wrong comparison operators, and unhandled negative or zero
-input. List issues before changing anything, then add boundary tests and fix.
-```
+1. **Generate a draft implementation.**
+   Ask Copilot in Edit mode to create a discount-percentage function with tiers at 100 / 500 / 1000, then accept the first draft as-is.
 
-1. Ask Copilot (Edit) to generate a function that returns a discount percentage for an order total (tiers at 100 / 500 / 1000). Accept its first suggestion **as-is**.
-2. **Review critically.** Chat → **Ask**: `Review this for boundary bugs, wrong comparison operators, and unhandled negative or zero input. List issues before changing anything.`
-3. **Validate with tests.** Ask Copilot to add tests for the **boundaries** (exactly 100, 500, 1000) and for negative/zero input. Run them — expect at least one failure.
-4. **Fix.** Use **Edit** to correct the boundary/operator bug and handle invalid input.
-5. **Re-run** until all tests pass.
-6. **Reflect:** note one thing Copilot got wrong that you only caught by reviewing.
+2. **Review critically before editing.**
+   Chat → Ask and use:
+   ```text
+   Review this for boundary bugs, wrong comparison operators, and unhandled negative or zero
+   input. List issues before changing anything.
+   ```
+
+3. **Add boundary and invalid-input tests.**
+   Ask Copilot to add tests for exact boundaries (100, 500, 1000) and negative/zero input. Run tests and expect at least one failure.
+
+4. **Fix with Edit mode.**
+   Use Edit to correct the boundary/operator issue and invalid-input handling.
+
+5. **Re-run until green.**
+   Re-run tests until all pass.
+
+6. **Reflect.**
+   Note one thing Copilot got wrong that only review/testing caught.
 
 **Responsible-usage reminders**
 - **Review everything** Copilot generates — you own the code you accept.
@@ -223,6 +299,6 @@ input. List issues before changing anything, then add boundary tests and fix.
 
 ## Wrap-up
 
-You practised the full Copilot workflow — ghost text, inline chat, Ask / Plan / Edit / Agent, NES,
+You practised the full Copilot workflow — code completions, inline chat, Ask / Plan / Edit / Agent, NES,
 effective prompting, MCP concepts, and responsible review — **in your own language**. The same habits
 carry over to the Intermediate, Prompt Engineering, Advanced, and Agents & MCP sessions.

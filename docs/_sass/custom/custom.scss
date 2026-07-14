@@ -4,14 +4,27 @@
   --brand-cyan: #44d4ff;
   --brand-mint: #38f4c8;
   --brand-amber: #ffd166;
-  --panel-bg: rgba(9, 17, 33, 0.86);
-  --panel-border: rgba(68, 212, 255, 0.28);
+  --panel-bg: #f5fbff;
+  --panel-border: rgba(48, 119, 168, 0.28);
 }
 
 body {
   font-family: "Sora", "Segoe UI", sans-serif;
   letter-spacing: 0.01em;
   text-wrap: pretty;
+}
+
+.main-content p,
+.main-content li,
+.main-content blockquote {
+  color: #1f3348;
+  line-height: 1.7;
+}
+
+.main-content strong,
+.main-content b {
+  color: #0f2238;
+  font-weight: 600;
 }
 
 code,
@@ -25,8 +38,8 @@ samp {
   background:
     radial-gradient(120% 80% at 20% 10%, rgba(68, 212, 255, 0.14) 0%, rgba(68, 212, 255, 0) 45%),
     radial-gradient(120% 80% at 80% 0%, rgba(56, 244, 200, 0.1) 0%, rgba(56, 244, 200, 0) 50%),
-    #0a1223;
-  border-right: 1px solid rgba(68, 212, 255, 0.16);
+    #f7fbff;
+  border-right: 1px solid rgba(48, 119, 168, 0.16);
 }
 
 /* Sidebar brand header (top-left) — shows the InfoMagnus logo. */
@@ -61,19 +74,19 @@ samp {
 
 .site-nav .nav-list .nav-list-link:hover {
   background: rgba(68, 212, 255, 0.12);
-  color: #e9f8ff;
+  color: #10304d;
 }
 
 .site-nav .nav-list .nav-list-item.active > .nav-list-link {
   background: linear-gradient(120deg, rgba(68, 212, 255, 0.2), rgba(56, 244, 200, 0.12));
-  color: #effbff;
+  color: #0f2b45;
 }
 
 .main {
   background:
     radial-gradient(70% 50% at 80% 0%, rgba(56, 244, 200, 0.08) 0%, rgba(56, 244, 200, 0) 60%),
     radial-gradient(80% 60% at 0% 8%, rgba(68, 212, 255, 0.08) 0%, rgba(68, 212, 255, 0) 55%),
-    #080f1f;
+    #f7fbff;
 }
 
 /* Remove Just the Docs default content width cap so pages can use full screen width. */
@@ -105,10 +118,18 @@ samp {
 }
 
 .main-content h1 {
+  font-size: clamp(1.7rem, 2.4vw, 2.35rem);
   font-weight: 800;
   letter-spacing: 0.01em;
-  line-height: 1.1;
+  line-height: 1.15;
   margin-bottom: 0.75rem;
+}
+
+/* First paragraph after the page title = the meta/subtitle line. */
+.main-content h1 + p {
+  color: #486380;
+  font-size: 0.98rem;
+  line-height: 1.6;
 }
 
 .main-content h1.home-title {
@@ -138,7 +159,7 @@ samp {
   border-radius: 999px;
   border: 1px solid rgba(68, 212, 255, 0.5);
   background: linear-gradient(130deg, rgba(68, 212, 255, 0.2), rgba(56, 244, 200, 0.16));
-  color: #ecf8ff;
+  color: #0e2d49;
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
@@ -150,7 +171,7 @@ samp {
 
 .main-content .btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 24px rgba(12, 163, 204, 0.3);
+  box-shadow: 0 8px 24px rgba(17, 95, 147, 0.22);
   border-color: rgba(68, 212, 255, 0.75);
 }
 
@@ -193,13 +214,60 @@ samp {
 .main-content details {
   border: 1px solid rgba(68, 212, 255, 0.28);
   border-radius: 12px;
-  background: rgba(9, 17, 33, 0.72);
+  background: #f8fcff;
   padding: 0.4rem 0.8rem;
 }
 
 .main-content summary {
   cursor: pointer;
   font-weight: 600;
+}
+
+/* Demo page polish: render "Prompts to type" as clear step cards. */
+.main-content h2#prompts-to-type + p + ol {
+  list-style: none;
+  counter-reset: prompt-step;
+  margin: 1rem 0 1.2rem;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.main-content h2#prompts-to-type + p + ol > li {
+  counter-increment: prompt-step;
+  position: relative;
+  margin: 0;
+  padding: 0.75rem 0.85rem 0.75rem 2.9rem;
+  border: 1px solid rgba(68, 212, 255, 0.24);
+  border-radius: 12px;
+  background:
+    linear-gradient(120deg, rgba(68, 212, 255, 0.08), rgba(56, 244, 200, 0.05)),
+    #fafdff;
+  line-height: 1.55;
+}
+
+.main-content h2#prompts-to-type + p + ol > li::before {
+  content: counter(prompt-step);
+  position: absolute;
+  inset-inline-start: 0.75rem;
+  inset-block-start: 0.62rem;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #11314d;
+  background: linear-gradient(145deg, rgba(68, 212, 255, 0.65), rgba(56, 244, 200, 0.5));
+  border: 1px solid rgba(255, 255, 255, 0.28);
+}
+
+.main-content h2#prompts-to-type + p + ol > li code {
+  background: #f2f8ff;
+  border: 1px solid rgba(105, 215, 255, 0.28);
+  border-radius: 7px;
+  padding: 0.05rem 0.35rem;
 }
 
 .home-hero {
@@ -209,7 +277,7 @@ samp {
   padding: 1.4rem 1.2rem;
   background:
     linear-gradient(150deg, rgba(68, 212, 255, 0.12), rgba(56, 244, 200, 0.08)),
-    rgba(9, 17, 33, 0.78);
+    #f7fcff;
   overflow: hidden;
 }
 
@@ -255,7 +323,7 @@ samp {
   border: 1px solid rgba(68, 212, 255, 0.24);
   border-radius: 16px;
   padding: 1rem;
-  background: rgba(9, 17, 33, 0.82);
+  background: #fbfdff;
 }
 
 .home-card h3 {
