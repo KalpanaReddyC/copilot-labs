@@ -1,4 +1,8 @@
-# Demo 2 — Getting Started in Your IDE
+<h1 align="center">💻 &nbsp; Demo 2 — Getting Started in Your IDE</h1>
+
+<p align="center">🧩 &nbsp; ⚡ &nbsp; ⌨️</p>
+
+<hr>
 
 **Agenda section:** Getting started in your IDE
 

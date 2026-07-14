@@ -1,4 +1,8 @@
-# Demo 1 — GitHub Copilot Overview  (Deck **Slide 16**)
+<h1 align="center">🐍 &nbsp; Demo 1 — GitHub Copilot Overview</h1>
+
+<p align="center">🧾 &nbsp; 👀 &nbsp; ✅</p>
+
+<hr>
 
 **Agenda section:** GitHub Copilot overview
 

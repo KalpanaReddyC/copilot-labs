@@ -1,29 +1,20 @@
-# CP-Fundamental — Demos
+<h1 align="center">🎬 &nbsp; CP Fundamentals — Demos</h1>
 
-Instructor demos for the **GitHub Copilot Fundamentals** deck. Each demo maps to a **Demo Time**
-slide and to an agenda section. Every folder has a **`demo.md`** (mode, model, exact prompts, steps,
-expected result) plus one **sample code file** you complete live with Copilot.
+<p align="center">🗺️ &nbsp; 🧭 &nbsp; 🛠️</p>
 
-> **One language per demo.** Instead of five parallel files, each demo uses the *single* language
-> that shows the feature most clearly. Across the four demos this covers all five languages:
-> **Demo 1 = Python, Demo 2 = C++, Demo 3 = JavaScript, Demo 4 = C# → converted to Flutter/Dart.**
-> The same prompts work in any language — swap the sample file if your audience prefers another.
+<hr>
 
-## Demo → slide → agenda map
+Participant execution guide for demo examples used in fundamentals labs.
 
-| Demo | Deck "Demo Time" slide | Agenda section | Language | Feature focus |
-|---|---|---|---|---|
-| [demo-1-copilot-overview](demo-1-copilot-overview/demo.md) | **Slide 16** | GitHub Copilot overview | **Python** | Copilot Overview, **AI Assistance in Action**, Real-world Use Cases (ghost text) |
-| [demo-2-getting-started](demo-2-getting-started/demo.md) | **Slide 32** | Getting started in your IDE | **C++** | Code completions (**ghost text, inline chat, quick chat, NES**), chat modes (**Ask, Plan**), shortcuts (**/ and #**) |
-| [demo-3-effective-prompts](demo-3-effective-prompts/demo.md) | **Slide 42** | Getting started / prompting | **JavaScript** | Crafting good prompts, **@ and # references**, iterative refinement |
-| [demo-4-tips-and-techniques](demo-4-tips-and-techniques/demo.md) | **Slide 72** | Tips and techniques | **C# → Flutter/Dart** | Commands & context, refactoring, documentation, **multilingual (convert code)**, tests, MCP (intro) |
+## Demo map
 
-## Scope — Fundamentals only
+| Demo | Area | Language | File |
+|---|---|---|---|
+| [demo-1-copilot-overview](demo-1-copilot-overview/demo.md) | Copilot overview | Python | demo-1-copilot-overview/orders.py |
+| [demo-2-getting-started](demo-2-getting-started/demo.md) | IDE basics | C++ | demo-2-getting-started/tip_calculator.cpp |
+| [demo-3-effective-prompts](demo-3-effective-prompts/demo.md) | Prompting | Java | demo-3-effective-prompts/Catalog.java |
+| [demo-4-tips-and-techniques](demo-4-tips-and-techniques/demo.md) | Tips and techniques | C# to Flutter/Dart | demo-4-tips-and-techniques/Inventory.cs |
 
-These demos stay on **everyday, single-developer** features. Demo 4 gives a **light, one-prompt
-taste** of refactoring, tests, and MCP so the audience knows they exist — the **deep dive
-(Agent mode, MCP servers, unit-test generation, refactoring, optimization) is the Intermediate
-course**, not here.
 
 ## Which model / which mode (quick reference)
 
@@ -31,11 +22,11 @@ course**, not here.
 |---|---|---|
 | Ghost text / code completions | Inline (just type) | Completion model (automatic) |
 | Next Edit Suggestions (NES) | Inline (Tab to jump) | Completion model (automatic) |
-| Inline chat | **Ctrl+I** in the editor | GPT-4.1 (fast base model) |
-| Quick chat | **Ctrl+Shift+I** | GPT-4.1 |
-| Ask mode | Chat panel → **Ask** | GPT-4.1 |
-| Plan mode | Chat panel → **Plan** | A reasoning model (e.g. GPT-5 / Claude Sonnet 4.5) — optional; GPT-4.1 is fine |
-| Edit (refactor / convert / docs) | Chat panel → **Edit** | GPT-4.1 |
+| Inline chat | **Ctrl+I** in the editor | GPT-5.4 (fast base model) |
+| Quick chat | **Ctrl+Shift+I** | GPT-5.4 |
+| Ask mode | Chat panel → **Ask** | GPT-5.4 |
+| Plan mode | Chat panel → **Plan** | A reasoning model (e.g. GPT-5 / Claude Sonnet 4.5) — optional; GPT-5.4 is fine |
+| Edit (refactor / convert / docs) | Chat panel → **Edit** | GPT-5.4 |
 
 > Model names are a guide — pick any *base* model for everyday tasks and a *reasoning* model when
 > you want more careful planning. Enable **Next Edit Suggestions** first:

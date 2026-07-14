@@ -1,4 +1,8 @@
-# Demo 3 — Writing Effective Prompts  (Deck **Slide 42**)
+<h1 align="center">✍️ &nbsp; Demo 3 — Writing Effective Prompts</h1>
+
+<p align="center">🗣️ &nbsp; 🎯 &nbsp; 🔍</p>
+
+<hr>
 
 **Agenda section:** Getting started / prompting
 
