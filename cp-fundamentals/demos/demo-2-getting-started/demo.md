@@ -1,6 +1,10 @@
-<h1 align="center">💻 &nbsp; Demo 2 — Getting Started in Your IDE</h1>
+<h1 align="center">💻 Demo 2 — Getting Started in Your IDE</h1>
 
-<p align="center">🧩 &nbsp; ⚡ &nbsp; ⌨️</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/Editor-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code" />
+  <img src="https://img.shields.io/badge/Focus-IDE%20Basics-FF9800?style=for-the-badge" alt="IDE Basics" />
+</p>
 
 <hr>
 

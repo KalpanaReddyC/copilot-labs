@@ -1,8 +1,17 @@
-<h1 align="center">🎯 &nbsp; GitHub Copilot — Common Hands-on Labs</h1>
+<h1 align="center">🎯 GitHub Copilot — Common Hands-on Labs</h1>
 
-<h3 align="center">C++ · Python · C# · JavaScript · Java</h3>
+<p align="center">
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C#" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
+</p>
 
-<p align="center">💡 &nbsp; 🧪 &nbsp; ✅</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/GitHub%20Copilot-000000?style=for-the-badge&logo=githubcopilot&logoColor=white" alt="GitHub Copilot" />
+  <img src="https://img.shields.io/badge/Hands--on-Labs-2088FF?style=for-the-badge" alt="Hands-on Labs" />
+</p>
 
 <hr>
 

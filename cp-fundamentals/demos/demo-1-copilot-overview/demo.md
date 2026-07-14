@@ -1,6 +1,10 @@
-<h1 align="center">🐍 &nbsp; Demo 1 — GitHub Copilot Overview</h1>
+<h1 align="center">🐍 Demo 1 — GitHub Copilot Overview</h1>
 
-<p align="center">🧾 &nbsp; 👀 &nbsp; ✅</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Mode-Ghost%20Text-000000?style=for-the-badge&logo=githubcopilot&logoColor=white" alt="Ghost Text" />
+  <img src="https://img.shields.io/badge/Difficulty-Beginner-4CAF50?style=for-the-badge" alt="Beginner" />
+</p>
 
 <hr>
 

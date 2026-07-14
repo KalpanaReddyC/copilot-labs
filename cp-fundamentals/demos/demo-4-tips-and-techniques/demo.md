@@ -1,6 +1,10 @@
-<h1 align="center">🛠️ &nbsp; Demo 4 — Tips and Techniques</h1>
+<h1 align="center">🛠️ Demo 4 — Tips and Techniques</h1>
 
-<p align="center">♻️ &nbsp; 🌍 &nbsp; 🧪</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-C%23-239120?style=for-the-badge&logo=csharp&logoColor=white" alt="C#" />
+  <img src="https://img.shields.io/badge/Convert-Flutter%2FDart-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter/Dart" />
+  <img src="https://img.shields.io/badge/Focus-Tips%20%26%20Techniques-607D8B?style=for-the-badge" alt="Tips and Techniques" />
+</p>
 
 <hr>
 

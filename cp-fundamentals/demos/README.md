@@ -1,6 +1,10 @@
-<h1 align="center">🎬 &nbsp; CP Fundamentals — Demos</h1>
+<h1 align="center">🎬 CP Fundamentals — Demos</h1>
 
-<p align="center">🗺️ &nbsp; 🧭 &nbsp; 🛠️</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/GitHub%20Copilot-000000?style=for-the-badge&logo=githubcopilot&logoColor=white" alt="GitHub Copilot" />
+  <img src="https://img.shields.io/badge/Type-Demos-8A2BE2?style=for-the-badge&logo=vlcmediaplayer&logoColor=white" alt="Demos" />
+  <img src="https://img.shields.io/badge/Editor-VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code" />
+</p>
 
 <hr>
 

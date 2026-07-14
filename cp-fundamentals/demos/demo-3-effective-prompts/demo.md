@@ -1,6 +1,10 @@
-<h1 align="center">✍️ &nbsp; Demo 3 — Writing Effective Prompts</h1>
+<h1 align="center">✍️ Demo 3 — Writing Effective Prompts</h1>
 
-<p align="center">🗣️ &nbsp; 🎯 &nbsp; 🔍</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/Language-Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
+  <img src="https://img.shields.io/badge/Skill-Prompting-9C27B0?style=for-the-badge&logo=githubcopilot&logoColor=white" alt="Prompting" />
+  <img src="https://img.shields.io/badge/Focus-Refinement-2196F3?style=for-the-badge" alt="Refinement" />
+</p>
 
 <hr>
 
