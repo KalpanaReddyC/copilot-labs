@@ -70,6 +70,16 @@ samp {
     #080f1f;
 }
 
+/* Remove Just the Docs default content width cap so pages can use full screen width. */
+.main-content-wrap,
+.main-content {
+  max-width: none;
+}
+
+.main-content-wrap {
+  width: 100%;
+}
+
 .site-title {
   font-weight: 800;
   letter-spacing: 0.02em;
