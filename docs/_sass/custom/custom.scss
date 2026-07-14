@@ -81,8 +81,32 @@ samp {
 }
 
 .site-title {
-  font-weight: 800;
-  letter-spacing: 0.02em;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 3rem;
+  padding: 0.9rem 1rem 0.75rem;
+  font-size: 0;
+  line-height: 1;
+}
+
+.site-title::before {
+  content: "";
+  display: block;
+  width: 180px;
+  height: 30px;
+  background: url("../infomagnus-banner.svg") no-repeat left center / contain;
+}
+
+.site-title::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  border: 1px solid rgba(131, 175, 216, 0.5);
+  border-radius: 999px;
+  background: url("../github-mark-light.png") no-repeat center / 13px 13px,
+    rgba(7, 21, 44, 0.72);
 }
 
 .site-button {
@@ -261,6 +285,22 @@ samp {
 }
 
 @media (max-width: 50rem) {
+  .site-title {
+    min-height: 2.7rem;
+    padding: 0.7rem 0.9rem 0.6rem;
+  }
+
+  .site-title::before {
+    width: 152px;
+    height: 25px;
+  }
+
+  .site-title::after {
+    width: 22px;
+    height: 22px;
+    background-size: 12px 12px;
+  }
+
   .main-header {
     min-height: 3rem;
   }
