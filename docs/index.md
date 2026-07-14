@@ -7,7 +7,7 @@ permalink: /
 ---
 
 # 🤖 GitHub Copilot — Hands-on Labs
-{: .fs-9 }
+{: .home-title }
 
 <div class="home-hero">
 	<div class="eyebrow">Resideo × InfoMagnus</div>

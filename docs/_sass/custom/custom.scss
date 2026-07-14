@@ -29,6 +29,11 @@ samp {
   border-right: 1px solid rgba(68, 212, 255, 0.16);
 }
 
+/* Remove the sidebar title/brand block (top-left) entirely. */
+.side-bar .site-header {
+  display: none;
+}
+
 .main-header {
   border-bottom: 1px solid rgba(68, 212, 255, 0.2);
   min-height: 3.5rem;
@@ -81,31 +86,21 @@ samp {
 }
 
 .site-title {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.6rem;
-  min-height: 3rem;
-  padding: 0.9rem 1rem 0.75rem;
-  font-size: 0;
-  line-height: 1;
-}
-
-.site-title::before {
-  content: "";
-  display: block;
-  width: 180px;
-  height: 30px;
-  background: url("../infomagnus-banner.svg") no-repeat left center / contain;
+  gap: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
 }
 
 .site-title::after {
   content: "";
-  display: block;
-  width: 25px;
-  height: 25px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
   border: 1px solid rgba(131, 175, 216, 0.5);
   border-radius: 999px;
-  background: url("../github-mark-light.png") no-repeat center / 13px 13px,
+  background: url("../github-mark-light.png") no-repeat center / 10px 10px,
     rgba(7, 21, 44, 0.72);
 }
 
@@ -118,6 +113,20 @@ samp {
   letter-spacing: 0.01em;
   line-height: 1.1;
   margin-bottom: 0.75rem;
+}
+
+.main-content h1.home-title {
+  font-size: clamp(2.3rem, 3.4vw, 4rem);
+  line-height: 1.04;
+  letter-spacing: 0;
+  margin-bottom: 1.05rem;
+  text-wrap: balance;
+}
+
+@media (min-width: 74rem) {
+  .main-content h1.home-title {
+    white-space: nowrap;
+  }
 }
 
 .main-content h2,
@@ -285,20 +294,10 @@ samp {
 }
 
 @media (max-width: 50rem) {
-  .site-title {
-    min-height: 2.7rem;
-    padding: 0.7rem 0.9rem 0.6rem;
-  }
-
-  .site-title::before {
-    width: 152px;
-    height: 25px;
-  }
-
   .site-title::after {
-    width: 22px;
-    height: 22px;
-    background-size: 12px 12px;
+    width: 16px;
+    height: 16px;
+    background-size: 9px 9px;
   }
 
   .main-header {
@@ -327,5 +326,11 @@ samp {
   .main-content .btn {
     width: 100%;
     margin-bottom: 0.55rem;
+  }
+
+  .main-content h1.home-title {
+    white-space: normal;
+    font-size: clamp(2rem, 8.5vw, 2.7rem);
+    line-height: 1.08;
   }
 }
