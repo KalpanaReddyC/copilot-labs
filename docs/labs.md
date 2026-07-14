@@ -110,15 +110,15 @@ explain gcd's complexity, refactor average to handle empty input, then add unit 
 - Feel the difference between weak and strong prompts on the same task.
 - Steer Copilot with context variables (`#file`, `@workspace`).
 
-**Prompt to give:**
-```text
-Sort the users by active first (active before inactive), then by age ascending, then by
-name A–Z. Do not mutate the original; return a new sorted collection.
-```
-
 1. Create a small list/array of "user" records, each with a `name`, `age`, and `active` flag (let ghost text build the sample data).
 2. **Weak prompt.** In Chat → Edit, select the data and ask: `sort this`. Note how much Copilot has to guess.
-3. **Strong prompt.** Undo, then ask precisely with the full prompt above. Compare the result — specificity wins.
+3. **Strong prompt.** Undo, then ask precisely.
+   **Prompt to give:**
+   ```text
+   Sort the users by active first (active before inactive), then by age ascending, then by
+   name A–Z. Do not mutate the original; return a new sorted collection.
+   ```
+   Compare the result — specificity wins.
 4. **Add context.** Reference the current file with `#` (e.g. `#<filename>`) or the workspace with `@workspace`, then ask a question that depends on that file.
 5. **Run & verify** the sort output is correct for a tie on age.
 

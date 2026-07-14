@@ -223,16 +223,13 @@ language automatically.
 **Mode:** Chat (Ask / Plan / Edit) with context variables
 **Model:** base model (e.g. GPT-5.4)
 
-**Prompt to give:**
-> `Sort the users by active first (active before inactive), then by age ascending, then by`
-> `name A–Z. Do not mutate the original; return a new sorted collection.`
-
 1. Create a small list/array of "user" records, each with a `name`, `age`, and `active` flag
    (let ghost text build the sample data).
 2. **Weak prompt.** In Chat → Edit, select the data and ask:
    > `sort this`
    Note how much Copilot has to guess.
-3. **Strong prompt.** Undo, then ask precisely:
+3. **Strong prompt.** Undo, then ask precisely.
+   **Prompt to give:**
    > `Sort the users by active first (active before inactive), then by age ascending, then by
    > name A–Z. Do not mutate the original; return a new sorted collection.`
    Compare the result — specificity wins.
