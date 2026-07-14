@@ -1,74 +1,100 @@
-# Demo 4 - Tips and Techniques
+# Demo 4 — Tips and Techniques  (Deck **Slide 72**)
 
-Language: C# (with conversion to Flutter/Dart)
-File: Inventory.cs
+**Agenda section:** Tips and techniques
+
+**Covers:** Commands & Context · Refactoring · Documentation · **Multilingual (Convert code)** ·
+Tests · Integrating & using an MCP server *(intro only)*
+
+**Language:** **C#** → converted to **Flutter/Dart**  ·  **File:** [Inventory.cs](Inventory.cs)
+
+---
 
 ## Setup
 
-1. Open Inventory.cs.
-2. Use Edit/Inline chat for refactor and conversion prompts.
-3. Use Ask mode for concept and context prompts.
+| Setting | Value |
+|---|---|
+| **Modes shown** | **Edit** / **Inline chat** (refactor, docs, convert), **Ask** (explain), `/tests` slash command, `#`/`@` context |
+| **Model** | GPT-5.4 for everything here |
+| **File** | `Inventory.cs` (a small, working class — 4 methods, all PASS) |
 
-## Execution prompts
+---
 
-1. Context prompts:
+## Step 1 — Commands & context
 
-```text
-Using #Inventory.cs, list every method and its one-line purpose.
+Show the two building blocks before using them:
+
+- Type `/` in Chat — the **command menu** appears (`/tests`, `/explain`, `/fix`, …).
+- Type `#` — the **context picker** appears. Attach three different scopes:
+  ```
+  Using #Inventory.cs, list every method and its one-line purpose.
+  ```
+  ```
+  Explain #NeedsReorder and when it returns true.
+  ```
+  (Select `ReorderQuantity` first, then:) `Explain #selection like I'm new to the codebase.`
+
+---
+
+## Step 2 — Documentation (Inline chat)
+
+**Where:** select the whole `ReorderQuantity` method → press **Ctrl+I** (or Edit mode) → type:
 ```
-
-```text
-Explain #NeedsReorder and when it returns true.
-```
-
-```text
-Explain #selection like I'm new to the codebase.
-```
-
-2. Documentation prompt:
-
-```text
 Add an XML documentation comment above ReorderQuantity: a <summary> plus <param> and <returns>, explaining the par-level rule.
 ```
 
-3. Refactor prompts:
+---
 
-```text
-Refactor ReorderReport in #Inventory.cs to use LINQ (Where + Select). Keep the behavior and return value identical.
+## Step 3 — Refactoring (Edit mode) — two quick wins
+
+**3a · `ReorderReport` → LINQ:**
+```
+Refactor ReorderReport to use LINQ (Where + Select). Keep the behavior and return value identical.
 ```
 
-```text
-Refactor TotalUnitsToOrder in #Inventory.cs to a single LINQ Sum(...) over ReorderQuantity. Do not change the result.
+**3b · `TotalUnitsToOrder` → LINQ:**
+```
+Refactor TotalUnitsToOrder to a single LINQ Sum(...) over ReorderQuantity. Do not change the result.
 ```
 
-4. Convert prompt:
+Re-run (`dotnet run`) — still `ALL PASS`. Point made: **refactoring changes shape, not behavior**,
+and the checks prove it.
 
-```text
-Convert #Inventory.cs to equivalent Flutter/Dart code named inventory.dart. Keep the same class shape, method names, and logic for all four methods, and include a main() that prints the same checks.
+---
+
+## Step 4 — Multilingual: convert to Flutter/Dart (Edit mode)
+
+**Type this prompt:**
 ```
+Convert this code to Flutter/Dart code named inventory.dart. Keep the same class shape, method names, and logic for all four methods, and include a main() that prints the same checks.
+```
+Save the output as `inventory.dart`. Show the same intent in another language — produced in seconds.
 
-5. Tests command:
+---
 
-```text
+## Step 5 — Tests *(intro only)* (`/tests`)
+
+**Where:** select `ReorderQuantity` → Chat → run:
+```
 /tests
 ```
-
-6. MCP concept prompt:
-
-```text
-In one paragraph, what is an MCP server and what would it let GitHub Copilot do that it can't do with just my open files? Keep it high level — no setup steps.
-```
+---
 
 ## Run
 
 ```bash
+# C# (inside a dotnet console project, Inventory.cs as Program.cs):
 dotnet run
-```
 
-After conversion:
-
-```bash
+# after the convert step:
 dart run inventory.dart
 ```
 
-Expected: all checks print PASS.
+Expected C# output:
+
+```
+NeedsReorder    : PASS
+ReorderReport   : PASS
+ReorderQuantity : PASS
+TotalUnitsOrder : PASS
+ALL PASS
+```
