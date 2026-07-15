@@ -190,7 +190,7 @@ language automatically.
    it, and ask:
    > `Explain how this works and its time complexity`
    You get an explanation with **no file change** (Ask never edits).
-4. **Edit mode — refactor safely.** Add an `average`/`mean` function. Chat → **Edit**, select it:
+4. **Edit / Agent mode — refactor safely.** Add an `average`/`mean` function. Chat → **Edit**, select it:
    > `Refactor to handle an empty input safely and add a doc comment`
    Review and apply the diff.
 5. **NES — propagate a rename.** Rename `average` to `mean` at its definition. Copilot shows a
@@ -218,9 +218,9 @@ language automatically.
 
 **# Learning objectives**
 - Feel the difference between weak and strong prompts on the same task.
-- Steer Copilot with context variables (`#file`, `@workspace`).
+- Steer Copilot with context variables (`#file`).
 
-**Mode:** Chat (Ask / Plan / Edit) with context variables
+**Mode:** Chat (Ask / Plan / Edit / Agent) with context variables
 **Model:** GPT-5.4
 
 1. Create a small list/array of "user" records, each with a `name`, `age`, and `active` flag
@@ -234,15 +234,14 @@ language automatically.
    > name A–Z. Do not mutate the original; return a new sorted collection.`
    Compare the result — specificity wins.
 4. **Add context.** Use context variables so Copilot sees the right scope:
-   - VS Code Chat: reference the current file with `#` (e.g. `#<filename>`) or the workspace with
-     `@workspace`, then ask a question that depends on that file.
+   - VS Code Chat: reference the current file with `#` (e.g. `#<filename>`) then ask a question that depends on that file.
    Observe how referencing context improves the answer.
 5. **Run & verify** the sort output is correct for a tie on age.
 
 **Checkpoints**
 - ✅ You produced a multi-key sort from a single precise prompt.
 - ✅ The original collection is unchanged (immutability respected).
-- ✅ You used at least one context reference (`#file` or `@workspace`).
+- ✅ You used at least one context reference (`#file`).
 
 **Stretch:** ask Copilot to add a secondary prompt that groups users by `active` and counts each.
 
@@ -256,14 +255,14 @@ language automatically.
 - Run the everyday loop: generate, refactor, debug, and document code with Copilot.
 - Use Ask mode to find the root cause of a real bug.
 
-**Mode:** Ask · Edit · inline chat
+**Mode:** Ask · Edit / Agent · inline chat
 **Model:** GPT-5.4
 
 **Prompt to give:**
 > `Create a function that parses a "key=value" config string into a map/dictionary/object,`
 > `ignoring blank lines and lines starting with #. Then help me debug, refactor, and document it.`
 
-1. **Generate.** Ask Copilot (Edit mode) to create a function that parses a `"key=value"` config
+1. **Generate.** Ask Copilot (Edit / Agent mode) to create a function that parses a `"key=value"` config
    string into a map/dictionary/object, ignoring blank lines and lines starting with `#`.
 2. **Introduce a bug on purpose.** By hand, change the split to only keep the first character of
    the value (e.g. slice/substr wrong). Run it — a test now fails.
@@ -329,7 +328,7 @@ language automatically.
 - Treat Copilot output as a draft: review critically, validate with tests, and fix.
 - Catch a subtle boundary/operator bug that only review or tests reveal.
 
-**Mode:** Ask · Edit
+**Mode:** Ask · Edit / Agent
 **Model:** reasoning model (e.g. Claude Sonnet 4 / GPT-5 mini)
 
 **Prompt to give:**
