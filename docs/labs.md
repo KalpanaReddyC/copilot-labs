@@ -101,8 +101,8 @@ you review and verify it.**
    Plan the steps to refactor an average/mean function so it safely handles empty input and has clear documentation. Steps only.
    ```
 
-5. **Edit mode — apply the refactor plan.**
-   Add an `average` function. Chat → **Edit**, select it, then use:
+5. **Edit / Agent mode — apply the refactor plan.**
+   Add an `average` function. Chat → **Edit/Agent**, select it, then use:
    ```text
    Refactor to handle an empty input safely and add a doc comment.
    ```
@@ -133,17 +133,17 @@ you review and verify it.**
 
 ## Lab 3 — Writing effective prompts
 
-**Time:** ~20 min · **Mode:** Chat (Ask / Plan / Edit) with context variables · **Model:** GPT-5.4
+**Time:** ~20 min · **Mode:** Chat (Ask / Plan / Edit / Agent) with context variables · **Model:** GPT-5.4
 
 **Learning objectives**
 - Feel the difference between weak and strong prompts on the same task.
-- Steer Copilot with context variables (`#file`, `@workspace`).
+- Steer Copilot with context variables (`#file`).
 
 1. **Create sample data with code completions.**
    Create a small list/array of users with `name`, `age`, and `active`.
 
 2. **Weak prompt first (show the gap).**
-   In Chat → Edit, select the data and use:
+   In Chat → Edit / Agent, select the data and use:
    ```text
    sort this
    ```
@@ -158,7 +158,7 @@ you review and verify it.**
    Compare the result — specificity wins.
 
 4. **Add context references.**
-   Reference `#<filename>` or `@workspace`, then ask a context-aware follow-up question.
+   Reference `#<filename>` then ask a context-aware follow-up question.
 
 5. **Run & verify.**
    Confirm ties on age are resolved by name order.
@@ -166,7 +166,7 @@ you review and verify it.**
 **Checkpoints**
 - ✅ You produced a multi-key sort from a single precise prompt.
 - ✅ The original collection is unchanged (immutability respected).
-- ✅ You used at least one context reference (`#file` or `@workspace`).
+- ✅ You used at least one context reference (`#file`).
 
 **Stretch:** ask Copilot to add a secondary prompt that groups users by `active` and counts each.
 
@@ -174,14 +174,14 @@ you review and verify it.**
 
 ## Lab 4 — Practical scenarios: generate, refactor, debug, document
 
-**Time:** ~25 min · **Mode:** Ask · Edit · inline chat · **Model:** GPT-5.4
+**Time:** ~25 min · **Mode:** Ask · Edit / Agent · inline chat · **Model:** GPT-5.4
 
 **Learning objectives**
 - Run the everyday loop: generate, refactor, debug, and document code with Copilot.
 - Use Ask mode to find the root cause of a real bug.
 
 1. **Generate the parser.**
-   In Chat → Edit, use:
+   In Chat → Edit / Agent, use:
    ```text
    Create a function that parses a "key=value" config string into a map/dictionary/object,
    ignoring blank lines and lines starting with #.
@@ -195,7 +195,7 @@ you review and verify it.**
    ```text
    This returns the wrong value for keys whose value has more than one character. Why, and what's the fix?
    ```
-   Apply the fix via Edit and re-run.
+   Apply the fix and re-run.
 
 4. **Refactor with inline chat.**
    Use **Ctrl+I** and prompt:
@@ -257,14 +257,14 @@ you review and verify it.**
 
 ## Lab 6 — Responsible usage: review, validate, fix
 
-**Time:** ~20 min · **Mode:** Ask · Edit · **Model:** reasoning model
+**Time:** ~20 min · **Mode:** Ask · Edit / Agent · **Model:** reasoning model
 
 **Learning objectives**
 - Treat Copilot output as a draft: review critically, validate with tests, and fix.
 - Catch a subtle boundary/operator bug that only review or tests reveal.
 
 1. **Generate a draft implementation.**
-   Ask Copilot in Edit mode to create a discount-percentage function with tiers at 100 / 500 / 1000, then accept the first draft as-is.
+   Ask Copilot in Edit / Agent mode to create a discount-percentage function with tiers at 100 / 500 / 1000, then accept the first draft as-is.
 
 2. **Review critically before editing.**
    Chat → Ask and use:
@@ -276,8 +276,8 @@ you review and verify it.**
 3. **Add boundary and invalid-input tests.**
    Ask Copilot to add tests for exact boundaries (100, 500, 1000) and negative/zero input. Run tests and expect at least one failure.
 
-4. **Fix with Edit mode.**
-   Use Edit to correct the boundary/operator issue and invalid-input handling.
+4. **Fix with Edit / Agent mode.**
+   Use Edit / Agent to correct the boundary/operator issue and invalid-input handling.
 
 5. **Re-run until green.**
    Re-run tests until all pass.
