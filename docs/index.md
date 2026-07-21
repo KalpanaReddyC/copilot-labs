@@ -26,7 +26,8 @@ permalink: /
 </div>
 
 [Start Fundamental Labs]({{ '/labs/fundamental/' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Browse Fundamental Demos]({{ '/demos/fundamental/' | relative_url }}){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Browse Fundamental Demos]({{ '/demos/fundamental/' | relative_url }}){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Open Prompt Engineering]({{ '/prompt-engg/' | relative_url }}){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
@@ -48,6 +49,11 @@ Copilot writes the code; you review, run, and verify.
 		<h3>🚧 Intermediate</h3>
 		<p>Start here: Setup, Hands-on Labs, and Guided Demos.</p>
 		<p><a href="{{ '/intermediate/labs/' | relative_url }}">Open Intermediate Labs</a></p>
+	</article>
+	<article class="home-card">
+		<h3>🧠 Prompt Engineering</h3>
+		<p>Prompt-focused labs and demos covering specificity, context, model choice, and instructions.</p>
+		<p><a href="{{ '/prompt-engg/' | relative_url }}">Open Prompt Engineering</a></p>
 	</article>
 </div>
 
