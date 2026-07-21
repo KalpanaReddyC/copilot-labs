@@ -25,8 +25,8 @@ permalink: /
 	<p class="fs-5"><strong>No git clone required.</strong></p>
 </div>
 
-[Start Fundamental Labs]({{ '/labs/fundamental/' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[Browse Fundamental Demos]({{ '/demos/fundamental/' | relative_url }}){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Open Fundamental]({{ '/fundamental/' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[Open Intermediate]({{ '/intermediate/' | relative_url }}){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Open Prompt Engineering]({{ '/prompt-engg/' | relative_url }}){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
@@ -37,7 +37,7 @@ Built for **large, mixed-language cohorts** (hundreds of participants). Each per
 **one** language — **C++, Python, C#, JavaScript, or Java** — and follows the exact same steps.
 Copilot writes the code; you review, run, and verify.
 
-## Two modules
+## Three modules
 
 <div class="home-cards">
 	<article class="home-card">
