@@ -55,6 +55,11 @@ Copilot writes the code; you review, run, and verify.
 		<p>Prompt-focused labs and demos covering specificity, context, model choice, and instructions.</p>
 		<p><a href="{{ '/prompt-engg/' | relative_url }}">Open Prompt Engineering</a></p>
 	</article>
+	<article class="home-card">
+		<h3>🔐 Secure Development</h3>
+		<p>Guided demos for secure, responsible AI-assisted coding: prompt hygiene, repo guardrails, and review.</p>
+		<p><a href="{{ '/security-dev/' | relative_url }}">Open Secure Development</a></p>
+	</article>
 </div>
 
 ## Before you start
