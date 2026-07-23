@@ -28,6 +28,7 @@ permalink: /
 [Open Fundamental]({{ '/fundamental/' | relative_url }}){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Open Intermediate]({{ '/intermediate/' | relative_url }}){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [Open Prompt Engineering]({{ '/prompt-engg/' | relative_url }}){: .btn .fs-5 .mb-4 .mb-md-0 }
+[Open Office Hours]({{ '/office-hours/' | relative_url }}){: .btn .fs-5 .mb-4 .mb-md-0 .mr-2 }
 
 ---
 
@@ -59,6 +60,11 @@ Copilot writes the code; you review, run, and verify.
 		<h3>🔐 Secure Development</h3>
 		<p>Guided demos for secure, responsible AI-assisted coding: prompt hygiene, repo guardrails, and review.</p>
 		<p><a href="{{ '/security-dev/' | relative_url }}">Open Secure Development</a></p>
+	</article>
+	<article class="home-card">
+		<h3>🤝 Office Hours</h3>
+		<p>Use-case driven guidance for troubleshooting, review strategy, local models, MCP, and agent workflows.</p>
+		<p><a href="{{ '/office-hours/' | relative_url }}">Open Office Hours</a></p>
 	</article>
 </div>
 
